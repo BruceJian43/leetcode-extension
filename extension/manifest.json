@@ -1,0 +1,17 @@
+{
+    "name": "Leetcode Extension",
+    "description": "This extension makes it easier for users to download their codes.",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://leetcode.com/problems/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
