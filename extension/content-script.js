@@ -58,7 +58,7 @@ function addDownloadButton(container) {
                 const codeWithLineNumber = codeMirror.innerText;
                 const code = codeWithLineNumber.split('\n').filter((elem, index) => {
                     return (index & 1);
-                }).join('\n');
+                }).join('\n').normalize('NFKD');
                 const filename = getFilename();
                 download(filename, code);
             }
